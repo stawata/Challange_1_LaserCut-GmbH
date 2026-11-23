@@ -1,3 +1,5 @@
+%cd "C:\Users\trish\Desktop\laser cut\Challange_1_LaserCut-GmbH\DSF4E_Challenge1-2"
+
 from pathlib import Path
 
 from helpers import (
@@ -8,7 +10,8 @@ from helpers import (
     plot_dxf,
 )
 
-path = Path(__file__).parent / "10991360" / "Geo (10).DXF"
+
+path = r"10991360\Geo (10).DXF"
 
 print("DXF path:", path)
 print("get_dxf_bounds:", get_dxf_bounds(path))
@@ -22,3 +25,5 @@ print("  lines:", len(lines))
 
 print("plot_dxf: opening plot")
 plot_dxf(path)
+
+print("bounding box area:", bounding_box_area(path))

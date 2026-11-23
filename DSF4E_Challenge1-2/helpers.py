@@ -4,6 +4,7 @@ import math
 from shapely.geometry import Point, LineString, Polygon
 
 
+
 def get_dxf_bounds(path):
     """Compute bounding box (width, height) for a DXF file."""
     try:
@@ -204,6 +205,7 @@ def load_dxf_geometry(file_path):
 
     return polygons, lines
 
+
 def plot_dxf(file_path):
     """Plot the geometry using matplotlib."""
     polygons, lines = load_dxf_geometry(file_path)
@@ -228,3 +230,12 @@ def plot_dxf(file_path):
     plt.grid(True)
     plt.show()
 
+def bounding_box_area(file_path):
+    width, height = get_dxf_bounds(path)
+    if width is not None and height is not None:
+        area = width*height
+        print(f"Bounding box area:{area}")
+        return area
+    else:
+        print("Could not determine DXF dimensions.")
+        return None
