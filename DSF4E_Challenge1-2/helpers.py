@@ -227,3 +227,4 @@ def plot_dxf(file_path):
     plt.ylabel("Y")
     plt.grid(True)
     plt.show()
+
