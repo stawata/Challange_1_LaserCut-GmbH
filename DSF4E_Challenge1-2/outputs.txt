@@ -1,0 +1,130 @@
+##analyse_sales_csv.py output for customers_sales.csv##
+============================================================
+
+Sales rows: 79
+
+Blank cells per column:
+customer_name      0
+customer_branch    0
+file_name          0
+order_quantity     0
+dtype: int64
+
+Cells with surrounding whitespace:
+customer_name      1
+customer_branch    0
+file_name          0
+order_quantity     0
+dtype: int64
+
+Rows with invalid quantities:
+Empty DataFrame
+Columns: [customer_name, customer_branch, file_name, order_quantity]
+Index: []
+
+Customer and branch combinations:
+customer_name       customer_branch 
+AutoPart AG         Berlin Branch        2
+                    Munich Branch        1
+AutoParts AG        Berlin Branch       13
+                    Munich Branch       18
+MetalForm SA        Frankfurt Branch    12
+Metalform SA        Frankfurt Branch     1
+PrecisionCut GmbH   Stuttgart Branch    20
+PrecisionCut GmbH   Stuttgart Branch     1
+TechFab Industries  Hamburg Branch      11
+
+Rows sharing a DXF filename:
+    customer_name  customer_branch    file_name order_quantity
+     AutoParts AG    Berlin Branch Geo (12).DXF           8800
+     AutoParts AG    Berlin Branch Geo (12).DXF           8800
+PrecisionCut GmbH Stuttgart Branch Geo (15).DXF           4000
+PrecisionCut GmbH Stuttgart Branch Geo (15).DXF           4000
+     AutoParts AG    Munich Branch Geo (55).DXF           9250
+     AutoParts AG    Munich Branch Geo (55).DXF           9250
+PrecisionCut GmbH Stuttgart Branch Geo (56).DXF           4800
+PrecisionCut GmbH Stuttgart Branch Geo (56).DXF           4800
+
+Identical sales rows:
+    customer_name  customer_branch    file_name order_quantity
+PrecisionCut GmbH Stuttgart Branch Geo (15).DXF           4000
+     AutoParts AG    Berlin Branch Geo (12).DXF           8800
+PrecisionCut GmbH Stuttgart Branch Geo (15).DXF           4000
+     AutoParts AG    Munich Branch Geo (55).DXF           9250
+     AutoParts AG    Munich Branch Geo (55).DXF           9250
+PrecisionCut GmbH Stuttgart Branch Geo (56).DXF           4800
+PrecisionCut GmbH Stuttgart Branch Geo (56).DXF           4800
+     AutoParts AG    Berlin Branch Geo (12).DXF           8800
+
+DXF files: 80
+Distinct filenames in sales: 75
+Sales filenames without a drawing: []
+Drawings without a sales record: ['Geo (16).DXF', 'Geo (18).DXF', 'Geo (45).DXF', 'Geo (72).DXF', 'Geo (73).DXF']
+
+Saved sales_with_dxf.csv with 79 rows.
+
+===================================================================================
+
+##analyse_sales_csv.py output for customers_sales_cleaned.csv##
+
+Sales rows: 79
+
+Blank cells per column:
+customer_name         0
+customer_branch       0
+file_name             0
+order_quantity        0
+possible_duplicate    0
+dtype: int64
+
+Cells with surrounding whitespace:
+customer_name         0
+customer_branch       0
+file_name             0
+order_quantity        0
+possible_duplicate    0
+dtype: int64
+
+Rows with invalid quantities:
+Empty DataFrame
+Columns: [customer_name, customer_branch, file_name, order_quantity, possible_duplicate]
+Index: []
+
+Customer and branch combinations:
+customer_name       customer_branch 
+AutoParts AG        Berlin Branch       15
+                    Munich Branch       19
+MetalForm SA        Frankfurt Branch    13
+PrecisionCut GmbH   Stuttgart Branch    21
+TechFab Industries  Hamburg Branch      11
+
+Rows sharing a DXF filename:
+    customer_name  customer_branch    file_name order_quantity possible_duplicate
+     AutoParts AG    Berlin Branch Geo (12).DXF           8800               True
+     AutoParts AG    Berlin Branch Geo (12).DXF           8800               True
+PrecisionCut GmbH Stuttgart Branch Geo (15).DXF           4000               True
+PrecisionCut GmbH Stuttgart Branch Geo (15).DXF           4000               True
+     AutoParts AG    Munich Branch Geo (55).DXF           9250               True
+     AutoParts AG    Munich Branch Geo (55).DXF           9250               True
+PrecisionCut GmbH Stuttgart Branch Geo (56).DXF           4800               True
+PrecisionCut GmbH Stuttgart Branch Geo (56).DXF           4800               True
+
+Identical sales rows:
+    customer_name  customer_branch    file_name order_quantity possible_duplicate
+PrecisionCut GmbH Stuttgart Branch Geo (15).DXF           4000               True
+     AutoParts AG    Berlin Branch Geo (12).DXF           8800               True
+PrecisionCut GmbH Stuttgart Branch Geo (15).DXF           4000               True
+     AutoParts AG    Munich Branch Geo (55).DXF           9250               True
+     AutoParts AG    Munich Branch Geo (55).DXF           9250               True
+PrecisionCut GmbH Stuttgart Branch Geo (56).DXF           4800               True
+PrecisionCut GmbH Stuttgart Branch Geo (56).DXF           4800               True
+     AutoParts AG    Berlin Branch Geo (12).DXF           8800               True
+
+DXF files: 80
+Distinct filenames in sales: 75
+Sales filenames without a drawing: []
+Drawings without a sales record: ['Geo (16).DXF', 'Geo (18).DXF', 'Geo (45).DXF', 'Geo (72).DXF', 'Geo (73).DXF']
+
+Saved sales_with_dxf.csv with 79 rows.
+
+===================================================================================
