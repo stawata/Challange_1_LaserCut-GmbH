@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Ejecutar helpers.py",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/DSF4E_Challenge1-2/helpers.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

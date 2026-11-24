@@ -11,7 +11,7 @@ def get_dxf_bounds(path):
         doc = ezdxf.readfile(path)
         msp = doc.modelspace()
 
-        min_x, min_y = float('inf'), float('inf')
+        min_x, min_y = float('inf'), float('pinf')
         max_x, max_y = float('-inf'), float('-inf')
 
         for e in msp:

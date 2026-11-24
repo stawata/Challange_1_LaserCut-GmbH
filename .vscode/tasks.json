@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Ejecutar helpers.py",
+      "type": "process",
+      "command": "/usr/bin/python3",
+      "args": [
+        "${workspaceFolder}/DSF4E_Challenge1-2/helpers.py"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
