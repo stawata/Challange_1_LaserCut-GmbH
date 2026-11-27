@@ -27,6 +27,10 @@ def main():
     # Flag every row in a matching group because the CSV has no order IDs or dates.
     sales["possible_duplicate"] = sales.duplicated(subset=ORDER_COLUMNS, keep=False)
 
+
+    # Sort alphabetically by company name, then branch
+    sales = sales.sort_values(by=["customer_name", "customer_branch"], ascending=True)
+
     sales.to_csv(output_path, index=False)
     print(f"Saved {len(sales)} rows to {output_path.name}.")
     print(f"Rows flagged as possible duplicates: {sales['possible_duplicate'].sum()}")
